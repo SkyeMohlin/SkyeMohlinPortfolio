@@ -1,0 +1,30 @@
+.page-title{
+    text-align: center;
+    font-size: 5rem;
+    font-family: 'choco', Arial, Helvetica, sans-serif;
+    height: 7rem;
+    transition: all 0.1s;
+    cursor: pointer;
+    animation: fadeIn 0.5s cubic-bezier(.43,1.94,.67,.73) 0.5s forwards;
+    transform: scale(0.5);
+    clip-path: circle(0px);
+    color: rgb(32, 32, 32);
+    text-wrap: nowrap;
+  }
+  
+  .page-title:hover{
+    opacity: 0.9;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      transform: scale(1);
+      clip-path: circle(300px);
+    }
+  }
+  
+  @media screen and (min-width: 550px) {
+    .page-title{
+      font-size: 6rem;
+    }
+  }
