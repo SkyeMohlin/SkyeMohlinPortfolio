@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'choco';
+  src: url('./fonts/ChocoShake.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  background-color: bisque;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 2rem;
+}
+
+/* Generics */
+
+.center{
+  display: flex;
+  justify-content: center;
+}

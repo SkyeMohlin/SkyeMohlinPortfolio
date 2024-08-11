@@ -1,0 +1,37 @@
+.adventurer-button{
+    width: 250px;
+    height: 250px;
+    object-fit:contain;
+    border-radius: 125px;
+    transition: transform 0.2s cubic-bezier(.43,1.94,.67,.73);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.adventurer-button:hover{
+    transform: scale(1.1);
+}
+
+@keyframes hoverBGFade {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100%{
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.adventurer-button_BG{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    background-color: rgba(181, 141, 218, 0.5);
+    transform: scale(0.5);
+}
+
+.adventurer-button:hover + .adventurer-button_BG{
+    animation: hoverBGFade 0.5s cubic-bezier(.43,1.94,.67,.73) forwards;
+}
