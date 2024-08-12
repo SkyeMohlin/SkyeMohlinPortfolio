@@ -37,23 +37,14 @@ const PageTitle = ({
         <div className={fixed ? "hidden" : "visible"}>
           <h1>{firstName}</h1>
           <h1 className="lastname">{lastName}</h1>
-
-          <h2
-            className={
-              fixed
-                ? "page-undertitle page-undertitle-minimized"
-                : "page-undertitle"
-            }
-          >
-            Game developer gone frontend
-          </h2>
+          <h2>Game developer gone frontend</h2>
         </div>
       </div>
 
       <div className="page-title small">
         <div className={fixed ? "visible slideIn" : "hidden"}>
           <h1>{firstName}</h1>
-          <h1>{lastName}</h1>
+          <h1 className="lastname">{lastName}</h1>
         </div>
       </div>
     </>

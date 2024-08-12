@@ -38,10 +38,6 @@
   order: 2;
 }
 
-.portfolio-piece-section_image:hover {
-  /* Add hover effects here if needed */
-}
-
 /* Keyframes */
 @keyframes focus-image {
   50% {
@@ -53,6 +49,8 @@
 .portfolio-piece-section_title {
   font-size: 4rem;
   line-height: 5rem;
+  font-weight: 500;
+  font-style: italic;
   margin: 0 0;
 }
 
@@ -61,6 +59,11 @@
   font-weight: lighter;
   font-style: italic;
   margin: 0 0 3rem;
+}
+
+.portfolio-piece-section_text {
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
 /* Shift Classes */

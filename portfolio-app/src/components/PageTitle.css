@@ -1,5 +1,6 @@
+/* Base styles for .page-title */
 .page-title {
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   font-family: "choco", Arial, Helvetica, sans-serif;
   transition: all 0.1s;
@@ -8,49 +9,68 @@
   clip-path: circle(0px at 0 100px);
   color: rgb(255, 255, 255);
   text-wrap: nowrap;
-  text-align: left;
 }
 
+/* Hover effects for .page-title */
 .page-title:hover {
   opacity: 0.9;
 }
 
-.normal .lastname {
-  transform: translate(-220px, 150px);
-}
-
-.normal .minimized {
-  animation: minimizeFadeOut 1s forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    clip-path: circle(1000px);
-  }
-}
-
-@media screen and (min-width: 550px) {
-  .page-title {
-    font-size: 4rem;
-  }
-}
-
+/* .page-title h1 styles */
 .page-title h1 {
   display: inline-block;
   height: 320px;
   margin: -2rem 0;
 }
 
+/* Media queries */
+@media screen and (min-width: 550px) {
+  .page-title {
+    font-size: 4rem;
+  }
+}
+
+/* .page-title h2 styles */
+.page-title h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: "Poppins";
+  font-style: italic;
+}
+
+/* .page-title_BG styles */
+.page-title_BG {
+  display: flex;
+  background: rgb(255, 89, 0);
+  background: radial-gradient(
+    circle,
+    rgba(255, 89, 0, 1) 0%,
+    rgba(255, 136, 0, 1) 100%
+  );
+  width: 600px;
+  padding: 0 2rem;
+  margin: 0 auto;
+  height: 150px;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/* .small styles */
 .small {
   position: fixed;
   top: 0;
   left: 150px;
 }
 
-.small.minimized {
-  animation: minimizeFadeInTop 1s ease 1s forwards;
+/* .normal class styles */
+.small .lastname {
+  transform: translate(5px);
 }
 
+/* .small h1 styles */
 .small h1 {
   display: inline-block;
   height: auto;
@@ -58,16 +78,11 @@
   font-size: 2rem;
 }
 
-.hidden {
-  animation: minimizeFadeOut 0.2s forwards;
-}
-
-.visible {
-  animation: minimizeFadeIn 0.5s forwards;
-}
-
-.visible.slideIn {
-  animation: minimizeFadeIn 0.5s forwards, minimizeFadeInTop 0.5s forwards;
+/* Animation keyframes */
+@keyframes fadeIn {
+  to {
+    clip-path: circle(1000px);
+  }
 }
 
 @keyframes minimizeFadeOut {
@@ -97,27 +112,28 @@
   }
 }
 
-.page-title_BG {
-  display: flex;
-  background: rgb(255, 89, 0);
-  background: radial-gradient(
-    circle,
-    rgba(255, 89, 0, 1) 0%,
-    rgba(255, 136, 0, 1) 100%
-  );
-  width: 600px;
-  padding: 0 2rem;
-  margin: 0 auto;
-  height: 150px;
-  border-radius: 2rem;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
+/* Visibility classes */
+.hidden {
+  animation: minimizeFadeOut 0.2s forwards;
 }
 
-.page-title h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2rem;
-  font-weight: lighter;
-  font-family: "Poppins";
+.visible {
+  animation: minimizeFadeIn 0.5s forwards;
+}
+
+.visible.slideIn {
+  animation: minimizeFadeIn 0.5s forwards, minimizeFadeInTop 0.5s forwards;
+}
+
+/* .normal class styles */
+.normal .lastname {
+  transform: translate(-220px, 150px);
+}
+
+.normal .minimized {
+  animation: minimizeFadeOut 1s forwards;
+}
+
+.small.minimized {
+  animation: minimizeFadeInTop 1s ease 1s forwards;
 }

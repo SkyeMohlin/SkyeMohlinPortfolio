@@ -32,7 +32,7 @@ const PortfolioPieceSection = ({
         "portfolio-piece-section " +
         (index === 0 ? "left-shift" : "right-shift")
       }
-      data-aos="fade-right"
+      data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
     >
       <a
         className="portfolio-piece-section_image"
