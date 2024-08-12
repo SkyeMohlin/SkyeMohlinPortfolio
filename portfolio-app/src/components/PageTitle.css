@@ -1,30 +1,123 @@
-.page-title{
-    text-align: center;
-    font-size: 5rem;
-    font-family: 'choco', Arial, Helvetica, sans-serif;
-    height: 7rem;
-    transition: all 0.1s;
-    cursor: pointer;
-    animation: fadeIn 0.5s cubic-bezier(.43,1.94,.67,.73) 0.5s forwards;
-    transform: scale(0.5);
-    clip-path: circle(0px);
-    color: rgb(32, 32, 32);
-    text-wrap: nowrap;
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "choco", Arial, Helvetica, sans-serif;
+  transition: all 0.1s;
+  cursor: pointer;
+  animation: fadeIn 5s cubic-bezier(0.43, 1.94, 0.67, 0.73) 1s forwards;
+  clip-path: circle(0px at 0 100px);
+  color: rgb(255, 255, 255);
+  text-wrap: nowrap;
+  text-align: left;
+}
+
+.page-title:hover {
+  opacity: 0.9;
+}
+
+.normal .lastname {
+  transform: translate(-220px, 150px);
+}
+
+.normal .minimized {
+  animation: minimizeFadeOut 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    clip-path: circle(1000px);
   }
-  
-  .page-title:hover{
-    opacity: 0.9;
+}
+
+@media screen and (min-width: 550px) {
+  .page-title {
+    font-size: 4rem;
   }
-  
-  @keyframes fadeIn {
-    to {
-      transform: scale(1);
-      clip-path: circle(300px);
-    }
+}
+
+.page-title h1 {
+  display: inline-block;
+  height: 320px;
+  margin: -2rem 0;
+}
+
+.small {
+  position: fixed;
+  top: 0;
+  left: 150px;
+}
+
+.small.minimized {
+  animation: minimizeFadeInTop 1s ease 1s forwards;
+}
+
+.small h1 {
+  display: inline-block;
+  height: auto;
+  margin: -2rem 0;
+  font-size: 2rem;
+}
+
+.hidden {
+  animation: minimizeFadeOut 0.2s forwards;
+}
+
+.visible {
+  animation: minimizeFadeIn 0.5s forwards;
+}
+
+.visible.slideIn {
+  animation: minimizeFadeIn 0.5s forwards, minimizeFadeInTop 0.5s forwards;
+}
+
+@keyframes minimizeFadeOut {
+  0% {
+    opacity: 1;
   }
-  
-  @media screen and (min-width: 550px) {
-    .page-title{
-      font-size: 6rem;
-    }
+  100% {
+    opacity: 0;
   }
+}
+
+@keyframes minimizeFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes minimizeFadeInTop {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.page-title_BG {
+  display: flex;
+  background: rgb(255, 89, 0);
+  background: radial-gradient(
+    circle,
+    rgba(255, 89, 0, 1) 0%,
+    rgba(255, 136, 0, 1) 100%
+  );
+  width: 600px;
+  padding: 0 2rem;
+  margin: 0 auto;
+  height: 150px;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.page-title h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: lighter;
+  font-family: "Poppins";
+}
