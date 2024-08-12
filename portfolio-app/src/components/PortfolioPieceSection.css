@@ -1,20 +1,65 @@
-.portfolio-piece-section{
+/* Container */
+.portfolio-piece-section {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    max-width: 1500px;
-    margin: 0 auto;
+    column-gap: 50px;
+    max-width: 1100px;
+    margin: 200px auto;
     text-align: left;
+    background-color: rgb(252, 252, 252);
+    border-radius: 180px 20px 20px 20px;
+    height: 500px;
+    padding: 30px;
 }
 
-@media screen and (min-width: 765px) {
-    .portfolio-piece-section{
+/* Media Queries */
+@media screen and (min-width: 1024px) {
+    .portfolio-piece-section {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-.portfolio-piece-section_image{
+/* Image Styling */
+.portfolio-piece-section_image {
     width: 600px;
     height: 300px;
     object-fit: cover;
     border-radius: 300px;
+    filter: saturate(0);
+    transition: filter 2s;
+    animation: focus-image;
+    animation-timeline: view(250px);
+}
+
+.portfolio-piece-section_image:hover {
+    /* Add hover effects here if needed */
+}
+
+/* Keyframes */
+@keyframes focus-image {
+    50% {
+        filter: saturate(1);
+    }
+}
+
+/* Title Styling */
+.portfolio-piece-section_title {
+    font-size: 4rem;
+    margin: 0 0;
+}
+
+.portfolio-piece-section_undertitle {
+    font-size: 0.9rem;
+    font-weight: lighter;
+    font-style: italic;
+    margin: 0 0 3rem;
+}
+
+/* Shift Classes */
+.left-shift {
+    transform: translateX(-50px);   
+}
+
+.right-shift {
+    transform: translateX(50px);   
 }
