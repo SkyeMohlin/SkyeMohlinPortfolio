@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import { getDownloadURL, ref } from "firebase/storage";
 import { storage } from "../firebase";
+import ToolList from "./ToolList";
 
 const PortfolioPieceSection = ({
   data,
@@ -35,16 +36,19 @@ const PortfolioPieceSection = ({
             (index % 2 === 0 ? "left-shift" : "right-shift")
           }
         >
-          <a
-            className="portfolio-piece-section_image container"
-            href={data.url}
-          >
-            <img
-              className="portfolio-piece-section_image"
-              src={imageUrl}
-              alt=""
-            />
-          </a>
+          <div>
+            <a
+              className="portfolio-piece-section_image container"
+              href={data.url}
+            >
+              <img
+                className="portfolio-piece-section_image"
+                src={imageUrl}
+                alt=""
+              />
+            </a>
+            {data.tools && <ToolList tools={data.tools} />}
+          </div>
           <div>
             <h3 className="portfolio-piece-section_title">{data.game_title}</h3>
             <h4 className="portfolio-piece-section_undertitle">

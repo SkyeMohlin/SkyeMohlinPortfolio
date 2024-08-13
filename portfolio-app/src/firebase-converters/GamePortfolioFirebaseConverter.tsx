@@ -10,6 +10,7 @@ const gamePortfolioConverter: FirestoreDataConverter<GamePortfolioItem> = {
       description: item.description,
       coverImgUrl: item.coverImgUrl,
       url: item.url,
+      tools: item.tools,
       // Add other fields as necessary
     };
   },
@@ -22,6 +23,7 @@ const gamePortfolioConverter: FirestoreDataConverter<GamePortfolioItem> = {
       description: data.description,
       coverImgUrl: data.coverImgUrl,
       url: data.url,
+      tools: data.tools,
       // Add other fields as necessary
     };
   },

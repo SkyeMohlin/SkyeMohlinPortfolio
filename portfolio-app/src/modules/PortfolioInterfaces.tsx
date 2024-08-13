@@ -5,6 +5,7 @@ interface GamePortfolioItem {
   description: string;
   coverImgUrl: string;
   url: string;
+  tools: string[];
 }
 
 export default GamePortfolioItem;
