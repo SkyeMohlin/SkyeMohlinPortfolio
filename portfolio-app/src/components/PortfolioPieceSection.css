@@ -9,6 +9,8 @@
   background-color: rgb(252, 252, 252);
   border-radius: 180px 20px 20px 20px;
   padding: 30px;
+
+  transition: all 0.5s cubic-bezier(0.43, 1.94, 0.67, 0.73);
 }
 
 .portfolio-piece-section:nth-of-type(even) {
@@ -28,13 +30,20 @@
   height: 300px;
   object-fit: cover;
   border-radius: 300px;
+}
+
+.container {
   filter: saturate(0);
-  transition: filter 2s;
   animation: focus-image;
   animation-timeline: view(250px);
 }
 
-.portfolio-piece-section:nth-of-type(even) .portfolio-piece-section_image {
+.portfolio-piece-section:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  scale: 1.05;
+}
+
+.portfolio-piece-section:nth-of-type(even) .container {
   order: 2;
 }
 

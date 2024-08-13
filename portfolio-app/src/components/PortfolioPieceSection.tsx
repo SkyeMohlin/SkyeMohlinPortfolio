@@ -27,27 +27,34 @@ const PortfolioPieceSection = ({
   }, []);
 
   return (
-    <div
-      className={
-        "portfolio-piece-section " +
-        (index === 0 ? "left-shift" : "right-shift")
-      }
-      data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-    >
-      <a
-        className="portfolio-piece-section_image"
-        href="https://www.google.com"
-      >
-        <img className="portfolio-piece-section_image" src={imageUrl} alt="" />
-      </a>
-      <div>
-        <h3 className="portfolio-piece-section_title">{data.game_title}</h3>
-        <h4 className="portfolio-piece-section_undertitle">
-          {data.undertitle}
-        </h4>
-        <p className="portfolio-piece-section_text">{data.description}</p>
+    <>
+      <div data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}>
+        <div
+          className={
+            "portfolio-piece-section " +
+            (index % 2 === 0 ? "left-shift" : "right-shift")
+          }
+        >
+          <a
+            className="portfolio-piece-section_image container"
+            href={data.url}
+          >
+            <img
+              className="portfolio-piece-section_image"
+              src={imageUrl}
+              alt=""
+            />
+          </a>
+          <div>
+            <h3 className="portfolio-piece-section_title">{data.game_title}</h3>
+            <h4 className="portfolio-piece-section_undertitle">
+              {data.undertitle}
+            </h4>
+            <p className="portfolio-piece-section_text">{data.description}</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
