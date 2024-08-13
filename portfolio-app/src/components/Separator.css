@@ -1,5 +1,8 @@
-.separator{
-    background-color: white;
-    height: 12px;
-    border-radius: 6px;
+.separator {
+  background-color: white;
+  height: 12px;
+  border-radius: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 1s;
 }
