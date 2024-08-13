@@ -1,0 +1,31 @@
+.toollist {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 25px;
+}
+
+.tool {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1.5px solid grey;
+  border-radius: 100px;
+  padding: 0.5rem 0.5rem;
+  transition: all 0.2s ease-in-out;
+  cursor: default;
+}
+
+.tool-icon {
+  font-size: 25px;
+  color: grey;
+}
+
+.tool-title {
+  font-size: 1rem;
+  padding: 0.1rem 0.8rem;
+  color: grey;
+  cursor: default;
+  margin: 0;
+}
