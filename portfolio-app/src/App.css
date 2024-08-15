@@ -518,3 +518,16 @@ body {
   grid-template-columns: 1fr 2fr;
   height: 55vh;
 }
+
+.content-area {
+  margin-top: 20px;
+}
+
+.scene {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 2000px;
+  z-index: -10;
+}
