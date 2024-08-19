@@ -1,0 +1,32 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  row-gap: 10px;
+}
+
+.name-input {
+  border-radius: 20px;
+  border: none;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.email-input {
+  border-radius: 20px;
+  border: none;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.message-input {
+  border-radius: 20px;
+  border: none;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 5rem;
+}

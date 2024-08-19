@@ -490,15 +490,25 @@ body {
   background: rgb(207, 248, 255);
   background: linear-gradient(
     235deg,
-    rgba(207, 248, 255, 1) 0%,
+    rgb(0, 0, 0) 0%,
+    rgb(36, 24, 48) 40%,
+    rgb(255, 192, 76) 60%,
+    rgba(207, 248, 255, 1) 75%,
     rgba(163, 196, 235, 1) 100%
   );
+  background-size: 400%;
   background-attachment: fixed;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: bolder;
   margin: 10rem;
   color: #1f1f1f;
   height: 1000px;
+  transition: background-position 3s;
+}
+
+.dark-mode {
+  background-position: right;
+  color: white;
 }
 
 /* Generics */

@@ -47,3 +47,37 @@
       )}
     </section>
   ) : null}
+
+
+
+
+  <div className="scene">
+    <Canvas camera={{ position: [0, 2, 5], fov: 50 }}>
+      <ambientLight
+        intensity={
+          3 * (darkMode ? lightIntensityNight : lightIntensityDay)
+        }
+        color={darkMode ? lightColorNight : lightColorDay}
+      />
+      <directionalLight
+        position={[100, 100, 100]}
+        intensity={
+          10 * (darkMode ? lightIntensityNight : lightIntensityDay)
+        }
+        color={darkMode ? lightColorNight : lightColorDay}
+      />
+      <AnimatedFBXModel
+        meshUrl="/3dmodels/T-Pose.fbx"
+        animationUrl={["/3dmodels/Skye_Anims_01.fbx"]}
+        position={[1.6, 0, 0]}
+        scale={0.001}
+        currentAnimation={charAnim}
+      />
+      <AnimatedFBXModel
+        meshUrl="/3dmodels/cloud_1.fbx"
+        position={[1.6, 0, 0]}
+        rotationY={-1.5}
+        scale={0.001}
+      />
+    </Canvas>
+  </div>

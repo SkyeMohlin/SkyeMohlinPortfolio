@@ -1,0 +1,41 @@
+.dark-mode-switch {
+  --switch-size: 25px;
+  --switch-width: 65px;
+
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: var(--switch-width);
+  height: var(--switch-size);
+  border-radius: 100px;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 5px black;
+  padding: 4px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.toggle-circle {
+  width: var(--switch-size);
+  height: var(--switch-size);
+  background-color: rgb(255, 244, 223);
+  border-radius: 100px;
+  transition: all 0.2s cubic-bezier(0.43, 1.94, 0.67, 0.73);
+  box-shadow: 0px 0px 5px black;
+}
+
+.toggle-circle.on {
+  transform: translateX(40px);
+  background-color: rgb(168, 201, 238);
+}
+
+.dark-mode-switch:hover .toggle-circle,
+.dark-mode-switch:focus .toggle-circle {
+  transform: translateX(-10px);
+}
+
+.dark-mode-switch:hover .on,
+.dark-mode-switch:focus .on {
+  transform: translateX(53px);
+}
